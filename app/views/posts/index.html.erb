@@ -1,0 +1,67 @@
+<% @posts.each do |post| %>
+
+<div class="panel panel default">
+  <div class="panel panel-heading"><%= post.user.display_name %></div>
+  <div class="panel-body">
+    <%= post.content %>
+  </div>
+</div>
+
+<% end %>
+
+<div class="dropdown">
+    <a class="inputBarA dropdown-toggle" data-toggle="dropdown" href="#">FILTER</a>
+    <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+        <li role="presentation">
+            <a role="menuitem" href="#">Text</a>
+        </li>
+        <li role="presentation">
+            <label>Label name</label>
+            <label>Label name</label>
+            <label class="checkbox">
+                <input type="checkbox">
+                Text </label>
+            <label class="checkbox">
+                <input type="checkbox">
+                Text </label>
+            <label class="checkbox">
+                <input type="checkbox">
+                Text </label>
+            <label class="checkbox">
+                <input type="checkbox">
+                Text </label>
+        </li>
+        <li class="dropdown-submenu">
+            <a tabindex="-1" href="#">Centralities</a>
+            <ul class="dropdown-menu">
+                <label class="radio">
+                    <input type="radio" name="options" id="optionsRadios1" value="A" checked>
+                    AA </label>
+                <label class="radio">
+                    <input type="radio" name="options" id="optionsRadios2" value="B">
+                    BB </label><label class="radio">
+                    <input type="radio" name="options" id="optionsRadios2" value="C">
+                    CC </label><label class="radio">
+                    <input type="radio" name="options" id="optionsRadios2" value="D">
+                    DD </label><label class="radio">
+                    <input type="radio" name="options" id="optionsRadios2" value="E">
+                    EE </label>
+            </ul>
+        </li>
+    </ul>
+</div>
+
+
+<script>
+$('.dropdown-submenu').hover(
+        function(){
+        //hover in
+            $('.dropdown-submenu > ul').css('top', '-' + $('.dropdown-submenu > ul').css('height'));
+
+        },
+        //hover out
+        function(){
+        }
+    );
+
+</script>
